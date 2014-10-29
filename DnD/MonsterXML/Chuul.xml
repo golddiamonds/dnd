@@ -1,7 +1,9 @@
 ﻿<?xml version="1.0" encoding="UTF-8" ?>
 <monster>
 	<name>Chuul</name>
-	<statblock>
+	<type>Large aberration</type>
+	<alignment>chaotic evil</alignment>
+	<stats>
 		<ac>16</ac>
 		<armortype>natural armor</armortype>
 		<hp>
@@ -40,12 +42,35 @@
 				<num>14</num>
 			</sense>
 		</senses>
-	</statblock>
+		<languages>
+			<language>Understands Deep Speech but can't speak</language>
+		</languages>
+		<challenge>4</challenge>
+		<xp>1100</xp>
+	</stats>
+	<specialtraits>
+		<trait>
+			<name>Amphibious</name>
+			<description>The chuul can breath air and water.</description>
+		</trait>
+		<trait>
+			<name>Sense Magic</name>
+			<description>The chuul senses magic within 120 feet of it at will. This trait otherwise works like the detect magic spell but isn't itself magic.</description>
+		</trait>
+	</specialtraits>
 	<actions>
-	<action>
-	<name>
-	</name>
-	</action>
+		<action>
+			<name>Multiattack</name>
+			<description>The chul makes two pincer attacks. If the chuul is grappling a creature, the chuul can also use its tentacles once.</description>
+		</action>
+		<action>
+			<name>Pincer</name>
+			<description>Melee Weapon Attack: +6 to hit, reach 10ft., one target. Hit: 11 (2d6 + 4) bludgeoning damage. The target is grappled (escape DC 14) if it is a Large or smaller creature and the chuul doesn't have two other creatures grappled.</description>
+		</action>
+		<action>
+			<name>Tentacles</name>
+			<description>One creature grappled by the chuul must succeed on a DC 13 Constitution saving throw or be poisoned for 1 minute. Until this poison ends, the target is paralyzed. The target can repeat the saving throw at teh end of each of its turns, ending the effect on itself on a success.</description>
+		</action>
 	</actions>
 	<description>
 		<main>Survivors of the ancient aboleth empire, chuuls are crustaceans the aboleths modified and endowed with sentience. They follow the ingrained directives of their creators, as they have done since the dawn of time.</main>
