@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<monster>
+<name>Chuul</name>
+<statblock>
+<ac>16</ac>
+<armortype>natural armor</armortype>
+<hp>
+<set>93</set>
+<rand>11d10+33</rand>
+</hp>
+<speed>
+<standard>30ft</standard>
+<swim>30ft</swim>
+</speed>
+<str>19</str>
+<dex>10</dex>
+<con>16</con>
+<int>5</int>
+<wis>11</wis>
+<cha>5</cha>
+<skills>
+<skill>
+<name>Perception</name>
+<num>+4</num>
+</skill>
+</skills>
+<damageimmunities>
+<type>poison</type>
+</damageimmunities>
+<conditionimmunities>
+<type>poisoned</type>
+</conditionimmunities>
+<senses>
+<sense>
+<name>darkvision</name>
+<num>60</num>
+</sense>
+<sense>
+<name>passive perception</name>
+<num>14</num>
+</sense>
+</senses>
+</statblock>
+<description>
+<main>Survivors of the ancient aboleth empire, chuuls are crustaceans the aboleths modified and endowed with sentience. They follow the ingrained directives of their creators, as they have done since the dawn of time.</main>
+<subdescription>
+<title>Primeval Relics</title>
+<text>In the primeval ages, aboleths ruled a vast empire that spanned the oceans of the world. In those days, the aboleths used mighty magic and bent the minds of the nascent creatures of the mortal realm. However, they were bound to the water and could not enforce their will beyond it without servants. Therefore, tehy created chuuls. \n Perfectly obedient, the chuuls collected sentient creatures and magic at teh aboleths' command. Chuuls were designed to endure teh ages of the world, growing in size and strength as the eons passed. When the aboleths' empire crumbled with the rise of the gods, the chuuls were cast adrift. However, these creatures continue to do what they did for the aboleths, slowly collecting humanoids, gathering treasure, amassing magic, and consolidating power.</text>
+</subdescription>
+<subdescription>
+<title>Tireless Guardians</title>
+<text>Chuul still guard the ruins of the ancient aboleth empire. They linger in silent observance of eons-old commands. Rumors and ancient maps sometimes lure treasure seekers to these ruins, but the reward for their boldness is death. \n Whatever riches that the explorers bring with them adds to the hoard guarded by teh chuuls. Chuuls can sense magic at a distance. This sense couples with an innate drive that leads them to slay explorers, take their gear, and bury it in secret locales aboleths dictated eons ago.</text>
+</subdescription>
+<subdescription>
+<title>Waiting Servants</title>
+<text>Although the aboleths' ancient empire fell long ago, the psychic bonds between them and their created servants remain intact. Chuuls that come into contact with aboleths immediately assume their old roles. Such chuuls redirect their compulsions to the service of the aboleths' sinister purposes.</text>
+</subdescription>
+</description>
+</monster>
