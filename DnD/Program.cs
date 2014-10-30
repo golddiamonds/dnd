@@ -1,5 +1,5 @@
 ﻿using System;
-using System.Xml;
+using System.Xml.Linq;
 
 namespace DnD
 {
@@ -8,26 +8,31 @@ namespace DnD
 		public static void Main (string[] args)
 		{
 			Console.WriteLine ("Printout of Chuul.xml");
-			XmlTextReader reader = new XmlTextReader ("/Users/ryanhall/Projects/DnD/DnD/MonsterXML/Chuul.xml");
 
-			while (reader.Read()) 
-			{
-				switch (reader.NodeType) 
-				{
-				case XmlNodeType.Element: // The node is an element.
-					Console.Write("<" + reader.Name);
-					Console.WriteLine(">");
-					break;
-				case XmlNodeType.Text: //Display the text in each element.
-					Console.WriteLine (reader.Value);
-					break;
-				case XmlNodeType.EndElement: //Display the end of the element.
-					Console.Write("</" + reader.Name);
-					Console.WriteLine(">");
-					break;
-				}
-			}
+			XDocument xdoc = XDocument.Load ("/Users/ryanhall/Projects/DnD/DnD/MonsterXML/Chuul.xml");
+			
+			Console.WriteLine (xdoc);
+
 			Console.ReadLine();
 		}
+	}
+
+	/* MONSTER CLASS */
+	class Monster
+	{
+		private int _str;
+		private int _dex;
+		private int _con;
+		private int _int;
+		private int _wis;
+		private int _cha;
+
+		public int Str { get; set; }
+		public int Dex { get; set; }
+		public int Con { get; set; }
+		public int Int { get; set; }
+		public int Wis { get; set; }
+		public int Cha { get; set; }
+
 	}
 }
