@@ -25,6 +25,12 @@ namespace DnD
 			//grab alignment
 			xmlmonster.PrintElement("alignment", "Alignment");
 
+			//do stat group
+			Console.WriteLine("Stats");
+
+			//grab str
+			xmlmonster.PrintElement("stats", "str", "Strength");
+
 			Console.ReadLine();
 		}
 	}
@@ -46,6 +52,12 @@ namespace DnD
 		public void PrintElement(string element, string label) {
 
 			Console.WriteLine(label + ": " + _xmonster.Element(element).Value);
+		}
+
+		//print a single child element's value
+		public void PrintElement(string parent, string child, string label) {
+
+			Console.WriteLine(label + ": " + _xmonster.Element(parent).Element(child).Value);
 		}
 
 		//print the entire xml doc
