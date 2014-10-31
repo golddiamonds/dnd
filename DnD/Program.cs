@@ -8,7 +8,7 @@ namespace DnD
 	{
 		public static void Main (string[] args)
 		{
-			//todo: create xsd for xml schema verification
+			//todo: create xsd for xml schema validation
 
 			//load file into xmlmonster
 			XmlMonster xmlmonster = new XmlMonster("/Users/ryanhall/Projects/DnD/DnD/MonsterXML/Chuul.xml");
