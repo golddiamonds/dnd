@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using System.Xml.Linq;
 
 namespace DnD
@@ -9,9 +10,21 @@ namespace DnD
 		{
 			Console.WriteLine ("Printout of Chuul.xml");
 
-			XDocument xdoc = XDocument.Load ("/Users/ryanhall/Projects/DnD/DnD/MonsterXML/Chuul.xml");
-			
+			XDocument xdoc = XDocument.Load("/Users/ryanhall/Projects/DnD/DnD/MonsterXML/Chuul.xml");
+
+			//todo: create xsd for xml schema verification
+
+			//print out entire doc
 			Console.WriteLine (xdoc);
+
+			//grab the monster tag
+			XElement xmonster = xdoc.Element("monster");
+
+			//grab monster "name" value
+			Console.WriteLine("Name: " + xmonster.Element("name").Value);
+
+			//grab monster "type" value
+			Console.WriteLine ("Type: " + xmonster.Element ("type").Value);
 
 			Console.ReadLine();
 		}
