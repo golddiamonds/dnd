@@ -24,10 +24,44 @@ namespace DnD
 			Console.WriteLine("Name: " + xmonster.Element("name").Value);
 
 			//grab monster "type" value
-			Console.WriteLine ("Type: " + xmonster.Element ("type").Value);
+			Console.WriteLine("Type: " + xmonster.Element ("type").Value);
+
+			//grab alignment
+			//this.PrintElement (xmonster, "Alignment", "alignment");
+
+			XmlMonster xmlmonster = new XmlMonster("/Users/ryanhall/Projects/DnD/DnD/MonsterXML/Chuul.xml");
+			xmlmonster.PrintElement("alignment", "Alignment");
+
+			xmlmonster.PrintXDoc();
+
 
 			Console.ReadLine();
 		}
+	}
+
+	class XmlMonster
+	{
+		private XDocument _xdoc;
+		private XElement _xmonster;
+
+		public XmlMonster(string xmlfile) {
+			//load file into XDocuent
+			_xdoc = XDocument.Load(xmlfile);
+
+			//load monster element into XElement
+			_xmonster = _xdoc.Element("monster");
+		}
+
+		public void PrintElement(string element, string label) {
+
+			Console.WriteLine(label + ": " + _xmonster.Element(element).Value);
+		}
+
+		public void PrintXDoc() {
+
+			Console.WriteLine(_xdoc);
+		}
+
 	}
 
 	/* MONSTER CLASS */
