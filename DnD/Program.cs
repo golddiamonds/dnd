@@ -8,32 +8,22 @@ namespace DnD
 	{
 		public static void Main (string[] args)
 		{
-			Console.WriteLine ("Printout of Chuul.xml");
-
-			XDocument xdoc = XDocument.Load("/Users/ryanhall/Projects/DnD/DnD/MonsterXML/Chuul.xml");
-
 			//todo: create xsd for xml schema verification
 
-			//print out entire doc
-			Console.WriteLine (xdoc);
-
-			//grab the monster tag
-			XElement xmonster = xdoc.Element("monster");
-
-			//grab monster "name" value
-			Console.WriteLine("Name: " + xmonster.Element("name").Value);
-
-			//grab monster "type" value
-			Console.WriteLine("Type: " + xmonster.Element ("type").Value);
-
-			//grab alignment
-			//this.PrintElement (xmonster, "Alignment", "alignment");
-
+			//load file into xmlmonster
 			XmlMonster xmlmonster = new XmlMonster("/Users/ryanhall/Projects/DnD/DnD/MonsterXML/Chuul.xml");
-			xmlmonster.PrintElement("alignment", "Alignment");
 
+			//print entire xml
 			xmlmonster.PrintXDoc();
 
+			//grab name
+			xmlmonster.PrintElement("name", "Name");
+
+			//grab type
+			xmlmonster.PrintElement("type", "Type");
+
+			//grab alignment
+			xmlmonster.PrintElement("alignment", "Alignment");
 
 			Console.ReadLine();
 		}
@@ -52,11 +42,13 @@ namespace DnD
 			_xmonster = _xdoc.Element("monster");
 		}
 
+		//print a single element's value
 		public void PrintElement(string element, string label) {
 
 			Console.WriteLine(label + ": " + _xmonster.Element(element).Value);
 		}
 
+		//print the entire xml doc
 		public void PrintXDoc() {
 
 			Console.WriteLine(_xdoc);
